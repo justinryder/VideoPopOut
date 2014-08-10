@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Video Pop Out",
+  "description": "This extension pops out videos into their own windows.",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "src/content-loader.js"
+      ]
+    }
+  ],
+
+  "web_accessible_resources": [
+    "lib/jquery.js",
+    "src/video-pop-out.js"
+  ]
+}
